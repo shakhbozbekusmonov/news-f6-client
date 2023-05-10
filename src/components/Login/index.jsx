@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { API_PATH, NEWS_F6_TOKEN } from "../../utils/constants";
 import { Formik } from "formik";
 import { Context as AuthContext } from "../../context/auth";
 
 const Login = () => {
     const { setAuthenticated } = React.useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = (values) => {
         (async () => {
@@ -19,11 +21,23 @@ const Login = () => {
                     data.token_type + " " + data.access_token
                 );
                 setAuthenticated(localStorage.getItem(NEWS_F6_TOKEN));
+                navigate("/admin");
             } catch (error) {
                 console.log(error.message);
             }
         })();
     };
+
+    React.useEffect(() => {
+        fetch(API_PATH + "profile", {
+            method: "GET",
+            headers: {
+                Authorization: localStorage.getItem(NEWS_F6_TOKEN),
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+    }, []);
 
     return (
         <div className='container'>

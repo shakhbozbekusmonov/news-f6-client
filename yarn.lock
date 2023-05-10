@@ -18,8 +18,8 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-react-refresh: ^0.3.4
     formik: ^2.2.9
-    miracle-api: ^1.0.5
     node-sass: ^8.0.0
+    prop-types: ^15.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.11.1
@@ -2831,13 +2831,6 @@ __metadata:
     minipass: ^3.0.0
     yallist: ^4.0.0
   checksum: f1fdeac0b07cf8f30fcf12f4b586795b97be856edea22b5e9072707be51fc95d41487faec3f265b42973a304fe3a64acd91a44a3826a963e37b37bafde0212c3
-  languageName: node
-  linkType: hard
-
-"miracle-api@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "miracle-api@npm:1.0.5"
-  checksum: 3475db4c42b52b2b9b6569409c5582e325e90163b7f660fafe03f2f739d720e279588de9852416bf6ccfc0da99e53fbe3ffaab4f7836b2f779cb65cfe7cd933d
   languageName: node
   linkType: hard
 
