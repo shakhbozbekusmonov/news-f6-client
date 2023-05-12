@@ -1,0 +1,73 @@
+.admin-layout {
+    display: flex;
+
+    &__start {
+        width: 250px;
+        height: 100vh;
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    &__start--user-information {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #000;
+    }
+
+    &__start--user-wrapper {
+        margin-right: 10px;
+        padding: 5px;
+        background-color: #ccc;
+        border-radius: 50%;
+    }
+
+    &__start--user-name {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__start--user-role {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+
+    &__start--nav-item {
+        position: relative;
+        margin-bottom: 10px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -15px;
+            bottom: 0;
+            margin: auto;
+            background-color: #f00;
+            width: 3px;
+            height: 0;
+            transition: 0.3s linear;
+            content: "";
+        }
+
+        &:hover::after, &:hover{
+            height: 100%;
+            color: #f00;
+        }
+    }
+
+    &__start--nav-link {
+        font-size: 18px;
+        &:hover{
+            color: #f00;
+        }
+    }
+
+    &__end {
+        width: calc(100% - 250px);
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #ccc;
+    }
+}
