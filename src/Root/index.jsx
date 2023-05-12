@@ -6,6 +6,7 @@ import LoginPage from "../pages/Login";
 import PrivateRoute from "../utils/PrivateRoute";
 import Dashboard from "../pages/Admin/Dashboard";
 import AdminLayout from "../components/AdminLayout";
+import Users from "../pages/Admin/Users";
 
 const Root = () => {
     return (
@@ -17,6 +18,7 @@ const Root = () => {
                 <Route path='/login' element={<LoginPage />} />
                 <Route element={<PrivateRoute />}>
                     <Route path='/admin' element={<AdminLayout />} />
+                    <Route path='/admin/users' element={<Users />} />
                     <Route path='/admin/dashboard' element={<Dashboard />} />
                 </Route>
                 <Route path='*' element={<NotFound />} />
